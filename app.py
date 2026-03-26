@@ -41,6 +41,8 @@ def direct_pay():
     # Return a 302 Found redirect
     # This is a 'Header Redirect' - the browser never stays on your domain
     return redirect(upi_url)
-
+@app.route("/test")
+def test():
+    return "Hello, World!"
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
